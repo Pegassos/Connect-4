@@ -15,6 +15,7 @@ game.play(2)
 
 # Exemple
 let game = new Connect4()
+
 game.play(0)
 game.play(0)
 game.play(1)
