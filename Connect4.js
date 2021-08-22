@@ -33,10 +33,10 @@ function Connect4 (){
       		  col = array[0].length
 
 	    const min = (a, b) => {
-        return (a < b) ? a : b;
+        	return (a < b) ? a : b;
 	    }
 	    const  max = (a,b) => {
-        return (a > b) ? a : b;
+        	return (a > b) ? a : b;
 	    }
       
 	    for(let line = 0; line < (row+col-1); line++) {
@@ -72,7 +72,7 @@ function Connect4 (){
     // we check the first one & for the 2nd we just invert grid twice  & check again
     let inverted = []
 	  for(let i = 0; i < 7; i++)
-  	  inverted.push(arrayColumn(grid,i))
+  	  	inverted.push(arrayColumn(grid,i))
    	let i2 = []
 	  for(let i = 5; i >= 0; i--)
  	    i2.push(arrayColumn(inverted,i))
@@ -168,5 +168,3 @@ game.play(2)
 game.play(2)
 game.play(3)
 */
-
-// Connect4 is a classic grid (6 rows & 7 columns) based game where two players take turns to be the first to form a horizontal, vertical, or diagonal line of four of one's own discs.
