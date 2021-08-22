@@ -14,8 +14,7 @@ Players take turn and after each turn u get a result:
 game.play(2)
 
 # Exemple
-let game = new Connect4();
-game.play(0)
+let game = new Connect4() game.play(0)
 game.play(0)
 game.play(1)
 game.play(1)
