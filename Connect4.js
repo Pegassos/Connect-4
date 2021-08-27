@@ -30,27 +30,20 @@ function Connect4 (){
     const getDiag = (array) => {
       let arr = []
       const row = array.length,
-      		  col = array[0].length
-
-	    const min = (a, b) => {
-        	return (a < b) ? a : b;
-	    }
-	    const  max = (a,b) => {
-        	return (a > b) ? a : b;
-	    }
+      	    col = array[0].length
       
 	    for(let line = 0; line < (row+col-1); line++) {
   		  let x = [],
-      		  startCol = max(0, line - row),
-      		  count = min(line, min(row, col - startCol))
+      		  startCol = Math.max(0, line - row),
+      		  count = Math.min(line, Math.min(row, col - startCol))
 
   		  for(let j = 0; j < count; j++) {
-    	    x.push( array[min(row, line) -j -1][startCol + j] )
+    	    		x.push( array[Math.min(row, line) -j -1][startCol + j] )
   		  }
   		
         if(x.length >= 4)
-  		    arr.push(x)
-	    }
+		arr.push(x)
+	 }
       
       return arr
     }
